@@ -16,7 +16,7 @@ const Index = () => {
   const programs = [
     {
       title: 'Группа "Мама и малыш"',
-      age: '6 мес - 2 года',
+      age: '2-4 года',
       description: 'Совместные занятия для мам и малышей: развитие через контакт, музыку и тактильные игры',
       icon: 'Heart',
       color: 'bg-pink-50 border-pink-200'
@@ -44,7 +44,7 @@ const Index = () => {
     },
     {
       title: 'Логопедия',
-      age: '2-10 лет',
+      age: 'с 2,5 лет',
       description: 'Коррекция речевых нарушений, постановка звуков, развитие речи',
       icon: 'MessageSquare',
       color: 'bg-orange-50 border-orange-200'
