@@ -116,7 +116,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/79804c08-b19c-4c66-a4b0-d4c058a770b2.png" 
                 alt="Всё Просто" 
-                className="h-12 w-12 object-contain"
+                className="h-12 w-12 object-cover rounded-full"
               />
               <span className="text-2xl font-bold text-primary">Всё Просто</span>
             </div>
@@ -375,7 +375,7 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/79804c08-b19c-4c66-a4b0-d4c058a770b2.png" 
                   alt="Всё Просто" 
-                  className="h-12 w-12 object-contain bg-white rounded-full p-1"
+                  className="h-12 w-12 object-cover rounded-full"
                 />
                 <span className="text-2xl font-bold">Всё Просто</span>
               </div>
