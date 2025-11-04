@@ -112,10 +112,12 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <Icon name="Sparkles" size={20} className="text-white" />
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/79804c08-b19c-4c66-a4b0-d4c058a770b2.png" 
+                alt="Всё Просто" 
+                className="h-12 w-12 object-contain"
+              />
               <span className="text-2xl font-bold text-primary">Всё Просто</span>
             </div>
             <nav className="hidden md:flex items-center gap-6">
@@ -369,10 +371,12 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <Icon name="Sparkles" size={20} className="text-primary" />
-                </div>
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/79804c08-b19c-4c66-a4b0-d4c058a770b2.png" 
+                  alt="Всё Просто" 
+                  className="h-12 w-12 object-contain bg-white rounded-full p-1"
+                />
                 <span className="text-2xl font-bold">Всё Просто</span>
               </div>
               <p className="text-white/80">Центр детского развития</p>
