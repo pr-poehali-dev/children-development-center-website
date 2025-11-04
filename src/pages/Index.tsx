@@ -70,25 +70,17 @@ const Index = () => {
 
   const teachers = [
     {
-      name: 'Анна Петрова',
-      position: 'Педагог раннего развития',
-      experience: '8 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/dbeae013-f7db-459a-ad5d-de456e4af517/files/d3fb8169-a699-4c94-8ea5-c1cb041c9c4e.jpg',
-      description: 'Специалист по методике Монтессори'
-    },
-    {
-      name: 'Мария Сидорова',
-      position: 'Логопед-дефектолог',
-      experience: '12 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/dbeae013-f7db-459a-ad5d-de456e4af517/files/112d6305-fc07-4bd1-9229-d6ce645fde47.jpg',
-      description: 'Кандидат педагогических наук'
-    },
-    {
-      name: 'Елена Иванова',
-      position: 'Преподаватель английского',
-      experience: '10 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/dbeae013-f7db-459a-ad5d-de456e4af517/files/d3fb8169-a699-4c94-8ea5-c1cb041c9c4e.jpg',
-      description: 'Сертификат CELTA, Cambridge'
+      name: 'Людмила Артуровна',
+      position: 'Педагог начального образования, нейродефектолог',
+      experience: '6 лет опыта',
+      image: 'https://cdn.poehali.dev/files/4348b70b-f003-4220-928b-bf9ec180b4d2.jpg',
+      description: 'СГПИ (Начальное образование, Иностранный язык), СКФУ (Нейродефектология)',
+      education: [
+        'Педагогика М. Монтессори',
+        'Логопедия и коррекционно-педагогическая работа',
+        'Сенсорная интеграция с детьми с особенностями развития'
+      ],
+      hobby: 'Играет на гитаре, любит осень'
     }
   ];
 
@@ -278,27 +270,63 @@ const Index = () => {
               Профессиональная команда с любовью к детям
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="max-w-2xl mx-auto">
             {teachers.map((teacher, index) => (
               <Card
                 key={index}
-                className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                className="hover:shadow-xl transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardHeader>
-                  <Avatar className="w-32 h-32 mx-auto mb-4 border-4 border-primary/20">
-                    <AvatarImage src={teacher.image} alt={teacher.name} />
-                    <AvatarFallback>{teacher.name[0]}</AvatarFallback>
-                  </Avatar>
-                  <CardTitle className="text-2xl">{teacher.name}</CardTitle>
-                  <CardDescription className="text-base">{teacher.position}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="flex items-center justify-center gap-2 text-primary font-medium">
-                    <Icon name="Award" size={18} />
-                    <span>{teacher.experience}</span>
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row gap-8">
+                    <div className="flex-shrink-0">
+                      <Avatar className="w-48 h-48 mx-auto border-4 border-primary/20">
+                        <AvatarImage src={teacher.image} alt={teacher.name} className="object-cover" />
+                        <AvatarFallback>{teacher.name[0]}</AvatarFallback>
+                      </Avatar>
+                    </div>
+                    <div className="flex-grow space-y-4">
+                      <div>
+                        <h3 className="text-3xl font-bold mb-2">{teacher.name}</h3>
+                        <p className="text-lg text-muted-foreground mb-3">{teacher.position}</p>
+                        <div className="flex items-center gap-2 text-primary font-medium mb-4">
+                          <Icon name="Award" size={20} />
+                          <span>{teacher.experience}</span>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Icon name="GraduationCap" size={20} className="text-primary" />
+                          <h4 className="font-semibold">Образование</h4>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{teacher.description}</p>
+                      </div>
+
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Icon name="BookOpen" size={20} className="text-primary" />
+                          <h4 className="font-semibold">Повышение квалификации</h4>
+                        </div>
+                        <ul className="space-y-1">
+                          {teacher.education?.map((edu, i) => (
+                            <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{edu}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <div className="flex items-center gap-2 mb-2">
+                          <Icon name="Heart" size={20} className="text-primary" />
+                          <h4 className="font-semibold">Увлечения</h4>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{teacher.hobby}</p>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{teacher.description}</p>
                 </CardContent>
               </Card>
             ))}
