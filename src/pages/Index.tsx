@@ -79,26 +79,7 @@ const Index = () => {
         'Педагогика М. Монтессори',
         'Логопедия и коррекционно-педагогическая работа',
         'Сенсорная интеграция с детьми с особенностями развития'
-      ],
-      hobby: 'Играет на гитаре, любит осень'
-    }
-  ];
-
-  const reviews = [
-    {
-      name: 'Ольга М.',
-      text: 'Мой сын ходит в центр уже полгода, и я вижу огромный прогресс! Педагоги внимательные, а атмосфера очень тёплая.',
-      rating: 5
-    },
-    {
-      name: 'Дмитрий К.',
-      text: 'Отличная подготовка к школе! Дочка с удовольствием бежит на занятия, стала более уверенной и самостоятельной.',
-      rating: 5
-    },
-    {
-      name: 'Наталья В.',
-      text: 'Профессиональные педагоги, современные методики и удобное расписание. Рекомендую всем родителям!',
-      rating: 5
+      ]
     }
   ];
 
@@ -125,7 +106,6 @@ const Index = () => {
             <nav className="hidden md:flex items-center gap-6">
               <a href="#programs" className="text-foreground hover:text-primary transition-colors">Программы</a>
               <a href="#teachers" className="text-foreground hover:text-primary transition-colors">Педагоги</a>
-              <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
               <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
             <Button className="hidden md:block">Записаться</Button>
@@ -318,47 +298,9 @@ const Index = () => {
                         </ul>
                       </div>
 
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <Icon name="Heart" size={20} className="text-primary" />
-                          <h4 className="font-semibold">Увлечения</h4>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{teacher.hobby}</p>
-                      </div>
+
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы родителей</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Нам доверяют самое ценное — детей
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-lg transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={18} className="text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-                  <CardTitle className="text-lg">{review.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed italic">"{review.text}"</p>
                 </CardContent>
               </Card>
             ))}
