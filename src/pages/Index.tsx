@@ -13,41 +13,58 @@ const Index = () => {
     message: ''
   });
 
-  const programs = [
+  const individualPrograms = [
     {
-      title: 'Группа "Мама и малыш"',
-      age: '2-4 года',
-      description: 'Совместные занятия для мам и малышей: развитие через контакт, музыку и тактильные игры',
+      title: 'Логопедия',
+      age: 'с 2,5 лет',
+      description: 'Коррекция речевых нарушений, развитие правильного произношения',
+      icon: 'MessageSquare',
+      color: 'bg-orange-50 border-orange-200'
+    },
+    {
+      title: 'Подготовка к школе',
+      age: '5-7 лет',
+      description: 'Развитие навыков для успешного старта в 1 классе',
+      icon: 'BookOpen',
+      color: 'bg-blue-50 border-blue-200'
+    },
+    {
+      title: 'Выполнение домашнего задания',
+      age: '1-4 класс',
+      description: 'Помощь ученикам 1-4 классов в освоении школьной программы',
+      icon: 'NotebookPen',
+      color: 'bg-green-50 border-green-200'
+    },
+    {
+      title: 'Педагог-психолог',
+      age: 'любой возраст',
+      description: 'Поддержка эмоционального и личностного развития',
+      icon: 'Brain',
+      color: 'bg-indigo-50 border-indigo-200'
+    },
+    {
+      title: 'Дети с особенностями развития',
+      age: 'любой возраст',
+      description: 'Индивидуальный подход и особая забота',
       icon: 'Heart',
+      color: 'bg-purple-50 border-purple-200'
+    }
+  ];
+
+  const groupPrograms = [
+    {
+      title: 'Мама и малыш',
+      age: '2-4 года',
+      description: 'Развивающие игры и упражнения для малышей вместе с родителями',
+      icon: 'Users',
       color: 'bg-pink-50 border-pink-200'
     },
     {
       title: 'Подготовка к школе',
       age: '5-7 лет',
-      description: 'Комплексная подготовка: чтение, математика, логика и эмоциональный интеллект',
-      icon: 'BookOpen',
-      color: 'bg-blue-50 border-blue-200'
-    },
-    {
-      title: 'Творческие занятия',
-      age: '3-10 лет',
-      description: 'Рисование, лепка, аппликация и конструирование для развития воображения',
-      icon: 'Palette',
-      color: 'bg-purple-50 border-purple-200'
-    },
-    {
-      title: 'Психолог',
-      age: '3-12 лет',
-      description: 'Индивидуальные консультации и групповые занятия по эмоциональному развитию',
-      icon: 'Brain',
-      color: 'bg-indigo-50 border-indigo-200'
-    },
-    {
-      title: 'Логопедия',
-      age: 'с 2,5 лет',
-      description: 'Коррекция речевых нарушений, постановка звуков, развитие речи',
-      icon: 'MessageSquare',
-      color: 'bg-orange-50 border-orange-200'
+      description: 'Занятия в группе для дошкольников, формирование базовых знаний и умений',
+      icon: 'GraduationCap',
+      color: 'bg-yellow-50 border-yellow-200'
     }
   ];
 
@@ -183,28 +200,72 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши программы</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Комплексные программы развития для детей разного возраста
+              Индивидуальные и групповые занятия для развития каждого ребёнка
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {programs.map((program, index) => (
-              <Card
-                key={index}
-                className={`${program.color} border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Icon name={program.icon as any} size={28} className="text-primary" />
-                  </div>
-                  <CardTitle className="text-xl mb-2">{program.title}</CardTitle>
-                  <CardDescription className="text-sm font-medium text-primary">{program.age}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{program.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                <Icon name="User" size={24} className="text-white" />
+              </div>
+              <h3 className="text-3xl font-bold">Индивидуальные программы</h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {individualPrograms.map((program, index) => (
+                <Card
+                  key={index}
+                  className={`${program.color} border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader>
+                    <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
+                      <Icon name={program.icon as any} size={28} className="text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-2">{program.title}</CardTitle>
+                    <CardDescription className="text-sm font-medium text-primary">{program.age}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{program.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                <Icon name="Users" size={24} className="text-white" />
+              </div>
+              <h3 className="text-3xl font-bold">Групповые программы</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+              {groupPrograms.map((program, index) => (
+                <Card
+                  key={index}
+                  className={`${program.color} border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader>
+                    <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
+                      <Icon name={program.icon as any} size={28} className="text-primary" />
+                    </div>
+                    <CardTitle className="text-xl mb-2">{program.title}</CardTitle>
+                    <CardDescription className="text-sm font-medium text-primary">{program.age}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{program.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl border-2 border-primary/20 max-w-4xl">
+              <div className="flex items-center gap-3">
+                <Icon name="Gift" size={32} className="text-primary" />
+                <p className="text-xl font-semibold text-primary">Первое занятие бесплатно!</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
