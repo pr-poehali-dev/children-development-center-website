@@ -386,32 +386,30 @@ const Index = () => {
                     Отправить заявку
                   </Button>
                 </form>
-                <div className="mt-8 pt-8 border-t grid md:grid-cols-3 gap-6">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name="MapPin" size={20} className="text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium mb-1">Адрес</div>
-                      <div className="text-sm text-muted-foreground">г. Москва, ул. Примерная, д. 10</div>
-                    </div>
-                  </div>
+                <div className="mt-8 pt-8 border-t space-y-6">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon name="Phone" size={20} className="text-primary" />
                     </div>
                     <div>
-                      <div className="font-medium mb-1">Телефон</div>
-                      <div className="text-sm text-muted-foreground">+7 (495) 123-45-67</div>
+                      <div className="font-medium mb-1">Телефоны</div>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <div><a href="tel:+79224308344" className="hover:text-primary transition-colors">8 (922) 430-83-44</a></div>
+                        <div><a href="tel:+79286860545" className="hover:text-primary transition-colors">8 (928) 686-05-45</a></div>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name="Clock" size={20} className="text-primary" />
+                      <Icon name="Globe" size={20} className="text-primary" />
                     </div>
                     <div>
-                      <div className="font-medium mb-1">Режим работы</div>
-                      <div className="text-sm text-muted-foreground">Пн-Вс: 9:00 - 20:00</div>
+                      <div className="font-medium mb-1">ВКонтакте</div>
+                      <div className="text-sm text-muted-foreground">
+                        <a href="https://vk.com/vse_prosto_mzd" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                          vk.com/vse_prosto_mzd
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -438,32 +436,30 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Программы</h4>
               <ul className="space-y-2 text-white/80">
-                <li>Раннее развитие</li>
+                <li>Мама и малыш</li>
                 <li>Подготовка к школе</li>
-                <li>Творческие занятия</li>
-                <li>Английский язык</li>
+                <li>Логопедия</li>
+                <li>Педагог-психолог</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2 text-white/80">
-                <li>+7 (495) 123-45-67</li>
-                <li>info@vseprosто.ru</li>
-                <li>г. Москва, ул. Примерная, 10</li>
+                <li><a href="tel:+79224308344" className="hover:text-white transition-colors">8 (922) 430-83-44</a></li>
+                <li><a href="tel:+79286860545" className="hover:text-white transition-colors">8 (928) 686-05-45</a></li>
+                <li><a href="https://vk.com/vse_prosto_mzd" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">vk.com/vse_prosto_mzd</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Мы в соцсетях</h4>
               <div className="flex gap-3">
-                <Button variant="secondary" size="icon" className="rounded-full">
-                  <Icon name="Instagram" size={20} />
-                </Button>
-                <Button variant="secondary" size="icon" className="rounded-full">
-                  <Icon name="Facebook" size={20} />
-                </Button>
-                <Button variant="secondary" size="icon" className="rounded-full">
-                  <Icon name="MessageCircle" size={20} />
-                </Button>
+                <a href="https://vk.com/vse_prosto_mzd" target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" size="icon" className="rounded-full hover:scale-110 transition-transform">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                      <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1.02-1.49-1.16-1.744-1.16-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.745-.576.745z"/>
+                    </svg>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
