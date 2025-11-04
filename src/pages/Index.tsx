@@ -15,6 +15,13 @@ const Index = () => {
 
   const programs = [
     {
+      title: 'Группа "Мама и малыш"',
+      age: '6 мес - 2 года',
+      description: 'Совместные занятия для мам и малышей: развитие через контакт, музыку и тактильные игры',
+      icon: 'Heart',
+      color: 'bg-pink-50 border-pink-200'
+    },
+    {
       title: 'Раннее развитие',
       age: '1-3 года',
       description: 'Развитие моторики, речи и творческих способностей через игру и музыку',
@@ -33,7 +40,7 @@ const Index = () => {
       age: '3-10 лет',
       description: 'Рисование, лепка, аппликация и конструирование для развития воображения',
       icon: 'Palette',
-      color: 'bg-pink-50 border-pink-200'
+      color: 'bg-purple-50 border-purple-200'
     },
     {
       title: 'Английский язык',
@@ -41,6 +48,20 @@ const Index = () => {
       description: 'Изучение языка в игровой форме с носителями и сертифицированными педагогами',
       icon: 'Languages',
       color: 'bg-yellow-50 border-yellow-200'
+    },
+    {
+      title: 'Психолог',
+      age: '3-12 лет',
+      description: 'Индивидуальные консультации и групповые занятия по эмоциональному развитию',
+      icon: 'Brain',
+      color: 'bg-indigo-50 border-indigo-200'
+    },
+    {
+      title: 'Логопедия',
+      age: '2-10 лет',
+      description: 'Коррекция речевых нарушений, постановка звуков, развитие речи',
+      icon: 'MessageSquare',
+      color: 'bg-orange-50 border-orange-200'
     }
   ];
 
