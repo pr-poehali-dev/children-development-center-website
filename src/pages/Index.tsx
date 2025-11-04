@@ -43,13 +43,6 @@ const Index = () => {
       color: 'bg-purple-50 border-purple-200'
     },
     {
-      title: 'Английский язык',
-      age: '4-12 лет',
-      description: 'Изучение языка в игровой форме с носителями и сертифицированными педагогами',
-      icon: 'Languages',
-      color: 'bg-yellow-50 border-yellow-200'
-    },
-    {
       title: 'Психолог',
       age: '3-12 лет',
       description: 'Индивидуальные консультации и групповые занятия по эмоциональному развитию',
